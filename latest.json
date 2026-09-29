@@ -1,0 +1,16 @@
+{
+  "version": "0.1.7",
+  "publishedAt": "2026-09-29T12:40:32Z",
+  "notes": "- Added a dedicated **JPEG files only** project type for JPEG-only shoots. JPEG-only projects ignore RAW files, do not show RAW matching issues, and export selected JPEG originals directly into `SELECTS` rather than `SELECTS/JPG`.\n- JPEG-only projects retain the same safe destination model: `SELECTS` can stay beside the source or live on another connected drive/folder. Source JPEGs remain copy-only and are never moved, renamed, overwritten or deleted.\n- Added optional software update checks backed by a public GitHub release manifest. Automatic checks are user-controllable, run at most once per day, fail silently when offline, and never block local culling/export work.\n- Added a manual **Check for Updates** control in Settings and an update-available dialog with **Later** / **Download Update**. Download Update opens the platform-specific public GitHub release asset in the default browser; Selects does not silently download or install updates.\n- Added strict update-manifest validation: semantic version comparison, HTTPS-only release links and GitHub host allow-listing.\n- Updated the Privacy Notice to v1.1 to disclose the optional GitHub update request and clarify that photographs, project data, decisions and usage analytics are not intentionally included.\n- Added four core tests for JPEG-only scan/export/destination behaviour and deterministic update-manifest validation, bringing the suite to 37 scenarios.",
+  "releasePage": "https://github.com/Appleby-Lab/Selects-Releases/releases/tag/v0.1.7",
+  "windowsX64": {
+    "url": "https://github.com/Appleby-Lab/Selects-Releases/releases/download/v0.1.7/Selects-Setup-0.1.7.exe",
+    "sha256": "eb1fbe7e49e1e103f93b4c0b4f048651053a950667285bdc9d2e8ba4b2bea88e",
+    "bytes": 35798094
+  },
+  "macosArm64": {
+    "url": "https://github.com/Appleby-Lab/Selects-Releases/releases/download/v0.1.7/Selects-0.1.7-macOS-Apple-Silicon.dmg",
+    "sha256": "472d5b01f424b4803cdbd9a9bbfaebd13dde082d103dbd8d7daf16c90c4b0b8a",
+    "bytes": 46965574
+  }
+}
