@@ -1,16 +1,16 @@
 {
-  "version": "0.1.7",
-  "publishedAt": "2026-10-04T02:15:03Z",
-  "notes": "- Added a dedicated **JPEG files only** project type for JPEG-only shoots. JPEG-only projects ignore RAW files, do not show RAW matching issues, and export selected JPEG originals directly into `SELECTS` rather than `SELECTS/JPG`.\n- JPEG-only projects retain the same safe destination model: `SELECTS` can stay beside the source or live on another connected drive/folder. Source JPEGs remain copy-only and are never moved, renamed, overwritten or deleted.\n- Added optional software update checks backed by a public GitHub release manifest. Automatic checks are user-controllable, run at most once per day, fail silently when offline, and never block local culling/export work.\n- Added a manual **Check for Updates** control in Settings and an update-available dialog with **Later** / **Download Update**. Download Update opens the platform-specific public GitHub release asset in the default browser; Selects does not silently download or install updates.\n- Added strict update-manifest validation: semantic version comparison, HTTPS-only release links and GitHub host allow-listing.\n- Updated the Privacy Notice to v1.1 to disclose the optional GitHub update request and clarify that photographs, project data, decisions and usage analytics are not intentionally included.\n- Added four core tests for JPEG-only scan/export/destination behaviour and deterministic update-manifest validation, bringing the suite to 37 scenarios.",
-  "releasePage": "https://github.com/Appleby-Lab/Selects-Releases/releases/tag/v0.1.7",
+  "version": "0.1.8",
+  "publishedAt": "2026-10-04T02:15:37Z",
+  "notes": "- Added persistent **Cull Rounds** so photographers can refine the Selects from a long shoot through Round 2, Round 3 and beyond without rewriting earlier-round decisions. Existing projects migrate automatically into **Round 1 - Initial Cull**.\n- New refinement rounds contain only photographs Selected through their complete parent chain and start every eligible photograph **Unreviewed**. Parent changes update child eligibility dynamically while retaining temporarily ineligible child decisions.\n- Added round switching, editable round names, round-aware progress/completion UI and **REFINE SELECTS / REFINE THESE SELECTS** flows.\n- Export planning is now scoped to the active Cull Round while still copying from original source RAW/JPEG files. Earlier-round exported files are never automatically removed.\n- Added optional soft **Selection Targets** to every Cull Round, including Round 1. Selected counts show `selected / target` and switch to Reject Red with an `OVER` amount when the target is exceeded; targets never block export.\n- Added the bundled **Handy Hint** tutorial supplied by Jack Appleby. It appears when a project starts/resumes until **Hide this tutorial in future** is selected, and can be reopened from both workspace Help and Settings.\n- Added version-aware **What's New** education for existing installs after an update. It displays once per version, skips fresh-install onboarding, and remains reopenable from Settings.\n- Changed user-facing storage and transfer formatting from binary KiB/MiB/GiB terminology to decimal B/KB/MB/GB/TB.\n- Advanced the local database semantic `user_version` to 2 so older versions do not silently rewrite multi-round state.\n- Added 8 core scenarios covering legacy-round migration, refinement eligibility, retained child decisions, third-round parent chains, SQLite persistence, active-round export, non-blocking targets and decimal storage formatting. Total suite: **45 tests**.",
+  "releasePage": "https://github.com/Appleby-Lab/Selects-Releases/releases/tag/v0.1.8",
   "windowsX64": {
-    "url": "https://github.com/Appleby-Lab/Selects-Releases/releases/download/v0.1.7/Selects-Setup-0.1.7.exe",
-    "sha256": "bebede869d1516f28b2fa15c59a988322f99597118a17c2688ff6c1a4c3020f2",
-    "bytes": 35792627
+    "url": "https://github.com/Appleby-Lab/Selects-Releases/releases/download/v0.1.8/Selects-Setup-0.1.8.exe",
+    "sha256": "240cad864f7dd2566dfe044be74dd47da538c607ee8107ed13787ec7c1d73904",
+    "bytes": 36104864
   },
   "macosArm64": {
-    "url": "https://github.com/Appleby-Lab/Selects-Releases/releases/download/v0.1.7/Selects-0.1.7-macOS-Apple-Silicon.dmg",
-    "sha256": "5d301b17c0ea30281ba297e53de96c1c879ffc5f266ed541ee6bf6e469dd9cb8",
-    "bytes": 46965297
+    "url": "https://github.com/Appleby-Lab/Selects-Releases/releases/download/v0.1.8/Selects-0.1.8-macOS-Apple-Silicon.dmg",
+    "sha256": "f9b8368d53b211b03b3e120fb842f9f5ce419b14a3acfad1ae2f5bc0c0749725",
+    "bytes": 47287612
   }
 }
